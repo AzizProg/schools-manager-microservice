@@ -1,1 +1,1 @@
-﻿#Students_manager_microservice
+﻿#Schools_manager_microservice
