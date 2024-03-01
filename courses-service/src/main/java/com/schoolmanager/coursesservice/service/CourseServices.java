@@ -1,14 +1,15 @@
-package com.schoolmanager.studentservice.service;
+package com.schoolmanager.coursesservice.service;
 
-import com.schoolmanager.studentservice.entity.Student;
+import com.schoolmanager.coursesservice.entity.CourseEntity;
+
 
 import java.util.List;
 
-public interface StudentServices {
-    public List<Student> getAllStudent();
+public interface CourseServices {
+    public List<CourseEntity> getAllCourses();
 
-    public  Student getStudentById(Long id);
+    public  CourseEntity getCourseById(Long id);
 
- public void createStudent(Student student);
+ public void createCourse(CourseEntity student);
 
 }

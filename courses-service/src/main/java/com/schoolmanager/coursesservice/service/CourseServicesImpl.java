@@ -1,8 +1,8 @@
-package com.schoolmanager.studentservice.service;
+package com.schoolmanager.coursesservice.service;
 
-import com.schoolmanager.studentservice.entity.Student;
-import com.schoolmanager.studentservice.repository.StudentRepository;
-import jakarta.persistence.EntityNotFoundException;
+import com.schoolmanager.coursesservice.entity.CourseEntity;
+import com.schoolmanager.coursesservice.repository.CourseRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,27 +10,27 @@ import java.util.List;
 
 
 @Service
-public class StudentServicesImpl implements  StudentServices{
+public class CourseServicesImpl implements CourseServices {
 
-    StudentRepository repository;
+    CourseRepository repository;
 
     @Autowired
-    public void setRepository(StudentRepository repository) {
+    public void setRepository(CourseRepository repository) {
         this.repository = repository;
     }
 
     @Override
-    public List<Student> getAllStudent() {
+    public List<CourseEntity> getAllCourses() {
         return repository.findAll();
     }
 
     @Override
-    public Student getStudentById(Long id) {
+    public CourseEntity getCourseById(Long id) {
         return repository.findById(id).orElseThrow();
     }
 
     @Override
-    public void createStudent(Student student) {
+    public void createCourse(CourseEntity student) {
         repository.save(student);
     }
 }

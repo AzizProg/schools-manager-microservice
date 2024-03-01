@@ -1,10 +1,10 @@
-package com.schoolmanager.studentservice.repository;
+package com.schoolmanager.coursesservice.repository;
 
-import com.schoolmanager.studentservice.entity.Student;
-import com.schoolmanager.studentservice.service.StudentServices;
+import com.schoolmanager.coursesservice.entity.CourseEntity;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface StudentRepository extends JpaRepository<Student,Long> {
+public interface CourseRepository extends JpaRepository<CourseEntity,Long> {
 }
