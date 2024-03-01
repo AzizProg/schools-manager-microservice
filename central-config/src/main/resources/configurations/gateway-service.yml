@@ -1,0 +1,24 @@
+
+server:
+  port: 8100
+
+eureka:
+  client:
+    register-with-eureka: false
+
+
+spring:
+  application:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: students
+          uri: http://localhost:8051
+          predicates:
+            - Path= /api/v1/students/**
+        - id: courses
+          uri: http://localhost:8052
+          predicates:
+            - Path= /api/v1/courses/**

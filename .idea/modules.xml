@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/courses-service/courses-service.iml" filepath="$PROJECT_DIR$/courses-service/courses-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/schools-manager-microservice.iml" filepath="$PROJECT_DIR$/.idea/schools-manager-microservice.iml" />
     </modules>
   </component>
